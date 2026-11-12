@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.7.0](https://github.com/hdoria/supawho/compare/v1.6.2...v1.7.0) (2026-11-12)
+
+
+### Features
+
+* **analytics:** add self-hosted Umami ([6c24ed9](https://github.com/hdoria/supawho/commit/6c24ed974c9142739892a0fa302c3a1f13fee981))
+
+
+### Bug Fixes
+
+* **updater:** detect Homebrew cask installs under any prefix ([146c2ad](https://github.com/hdoria/supawho/commit/146c2ada8b0b3541153b85c2f2b50e8e06f8b394))
+
 ## [1.6.2](https://github.com/EliaTolin/supawho/compare/v1.6.1...v1.6.2) (2026-10-08)
 
 
