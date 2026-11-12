@@ -27,7 +27,7 @@ import (
 )
 
 const (
-	owner = "EliaTolin"
+	owner = "hdoria"
 	repo  = "supawho"
 )
 

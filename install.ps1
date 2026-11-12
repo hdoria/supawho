@@ -1,6 +1,6 @@
 # supawho installer for Windows (PowerShell)
 #
-#   irm https://raw.githubusercontent.com/EliaTolin/supawho/main/install.ps1 | iex
+#   irm https://raw.githubusercontent.com/hdoria/supawho/main/install.ps1 | iex
 #
 # Installs the latest release into %LOCALAPPDATA%\Programs\supawho and adds it to
 # the user PATH. Pass a version as the first arg to pin one, e.g.:
@@ -9,7 +9,7 @@
 param([string]$Version = "latest")
 
 $ErrorActionPreference = "Stop"
-$Repo = "EliaTolin/supawho"
+$Repo = "hdoria/supawho"
 
 Write-Host "`n  Installing supawho...`n"
 

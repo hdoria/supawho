@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-REPO="EliaTolin/supawho"
+REPO="hdoria/supawho"
 INSTALL_DIR="${INSTALL_DIR:-/usr/local/bin}"
 VERSION="${1:-latest}"
 

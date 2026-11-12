@@ -47,7 +47,7 @@ nfpms:
   - id: linux-packages
     package_name: supawho
     vendor: Elia Tolin
-    homepage: "https://github.com/EliaTolin/supawho"
+    homepage: "https://github.com/hdoria/supawho"
     maintainer: "Elia Tolin <EliaTolin@users.noreply.github.com>"
     description: "Manage multiple Supabase CLI accounts securely across macOS, Linux and Windows"
     license: MIT
@@ -59,27 +59,8 @@ nfpms:
 
 release:
   github:
-    owner: EliaTolin
+    owner: hdoria
     name: supawho
   # release-please already created the GitHub Release + tag; just add the
   # binaries and checksums to it instead of creating a new one.
   mode: append
-
-# Automatically update the Homebrew cask on the tap.
-# Replaces the previous update-homebrew.yml GitHub Action.
-homebrew_casks:
-  - name: supawho
-    repository:
-      owner: EliaTolin
-      name: homebrew-tap
-      token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
-    homepage: "https://github.com/EliaTolin/supawho"
-    description: "Manage multiple Supabase CLI accounts securely across macOS, Linux and Windows"
-    # The binary is unsigned; strip the Gatekeeper quarantine flag on install
-    # so it runs without "developer cannot be verified" prompts.
-    hooks:
-      post:
-        install: |
-          if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
-            system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/supawho"]
-          end
