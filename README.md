@@ -20,7 +20,7 @@ One command to jump between projects and clients. 🔍
 
 <br>
 
-[![Release](https://img.shields.io/github/v/release/EliaTolin/supawho?style=for-the-badge&color=3FCF8E&label=version)](https://github.com/EliaTolin/supawho/releases)
+[![Release](https://img.shields.io/github/v/release/hdoria/supawho?style=for-the-badge&color=3FCF8E&label=version)](https://github.com/hdoria/supawho/releases)
 [![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=fff)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
@@ -48,15 +48,15 @@ One command to jump between projects and clients. 🔍
 | 🖥️ **Truly cross-platform** | One static binary for macOS, Linux and Windows. No runtime to install |
 | ⚡ **Instant switching** | `supawho use client-a` and you're logged in |
 | 🔄 **Self-updating** | `supawho upgrade` keeps you current on any OS |
-| 🍺 **Installs everywhere** | Homebrew, `.deb`/`.rpm`/`.apk` packages, or a one-line script |
+| 🍺 **Installs everywhere** | Build from source, `.deb`/`.rpm`/`.apk` packages, or a one-line script |
 
 <br>
 
 ## ⚡ Quick start
 
 ```bash
-# 1. Install (macOS shown — Linux & Windows below)
-brew install EliaTolin/tap/supawho
+# 1. Install from source (Go 1.25+)
+git clone https://github.com/hdoria/supawho.git && cd supawho && go build -o /usr/local/bin/supawho .
 
 # 2. Use it
 supawho add work sbp_your_token   # save an account (once)
@@ -75,7 +75,7 @@ Pick your platform — every option gives you the same single, dependency-free b
 ### 🍎 macOS
 
 ```bash
-brew install EliaTolin/tap/supawho
+git clone https://github.com/hdoria/supawho.git && cd supawho && go build -o /usr/local/bin/supawho .
 ```
 
 <details>
@@ -84,17 +84,17 @@ brew install EliaTolin/tap/supawho
 <br>
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/EliaTolin/supawho/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/hdoria/supawho/main/install.sh | bash
 ```
 
-Or grab the `Darwin` archive from the [releases page](https://github.com/EliaTolin/supawho/releases) and drop the binary in your `PATH`.
+Or grab the `Darwin` archive from the [releases page](https://github.com/hdoria/supawho/releases) and drop the binary in your `PATH`.
 
 </details>
 
 ### 🐧 Linux
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/EliaTolin/supawho/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/hdoria/supawho/main/install.sh | bash
 ```
 
 <details>
@@ -102,7 +102,7 @@ curl -fsSL https://raw.githubusercontent.com/EliaTolin/supawho/main/install.sh |
 
 <br>
 
-Download the package for your distro from the [releases page](https://github.com/EliaTolin/supawho/releases), then:
+Download the package for your distro from the [releases page](https://github.com/hdoria/supawho/releases), then:
 
 ```bash
 # Debian / Ubuntu
@@ -122,7 +122,7 @@ sudo apk add --allow-untrusted supawho_*_Linux_x86_64.apk
 ### 🪟 Windows
 
 ```powershell
-irm https://raw.githubusercontent.com/EliaTolin/supawho/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/hdoria/supawho/main/install.ps1 | iex
 ```
 
 <details>
@@ -130,7 +130,7 @@ irm https://raw.githubusercontent.com/EliaTolin/supawho/main/install.ps1 | iex
 
 <br>
 
-Download `supawho_*_Windows_x86_64.zip` from the [releases page](https://github.com/EliaTolin/supawho/releases), extract `supawho.exe`, and add it to your `PATH`.
+Download `supawho_*_Windows_x86_64.zip` from the [releases page](https://github.com/hdoria/supawho/releases), extract `supawho.exe`, and add it to your `PATH`.
 
 </details>
 
@@ -139,7 +139,7 @@ Download `supawho_*_Windows_x86_64.zip` from the [releases page](https://github.
 Requires [Go](https://go.dev/dl/) 1.25+:
 
 ```bash
-git clone https://github.com/EliaTolin/supawho.git
+git clone https://github.com/hdoria/supawho.git
 cd supawho
 go install .
 ```
@@ -241,7 +241,6 @@ It downloads the latest release, **verifies its checksum**, and swaps the binary
 
 | Installed via | How it updates |
 |---|---|
-| Homebrew | `brew upgrade supawho` |
 | Install script / raw binary | `supawho upgrade` |
 | `.deb` / `.rpm` / `.apk` | your system package manager |
 
@@ -294,10 +293,12 @@ That's on purpose — update through the manager you installed it with (see the 
 
 Issues, ideas and PRs are welcome — this project grew cross-platform thanks to the community. Special thanks to [@igorgomes3](https://github.com/igorgomes3) whose [supawho-linux](https://github.com/igorgomes3/supawho-linux) fork sparked the multi-OS rewrite.
 
-Found a bug or want a feature? [Open an issue](https://github.com/EliaTolin/supawho/issues).
+Found a bug or want a feature? [Open an issue](https://github.com/hdoria/supawho/issues).
 
 <br>
 
 ## 📄 License
 
 [MIT](LICENSE) — Made with 💚 by [Elia Tolin](https://github.com/EliaTolin)
+
+This repository is an independent copy of [EliaTolin/supawho](https://github.com/EliaTolin/supawho), maintained by [hdoria](https://github.com/hdoria). Self-update and install scripts use only this repository's releases; upstream changes are reviewed before they are merged here.
